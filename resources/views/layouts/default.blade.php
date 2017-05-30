@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>@yield('title', 'Sample') - Laravel 入门教程</title>
+    <title>@yield('title', 'Sample App') - Laravel 入门教程</title>
+    <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
-    <!-- 表示该占位区域将用于显示 content 区块的内容 -->
-    @yield('content')
+    @include('layouts._header')
+
+    <div class="container">
+      @yield('content')
+      @include('layouts._footer')
+    </div>
   </body>
 </html>
